@@ -14,41 +14,60 @@ namespace Group11_FinaalProject
 
         }
 
-        public class Solution
+        protected void btnGenerate_Click(object sender, EventArgs e)
         {
-            public string CountAndSay(int n)
+            int n;
+            if (int.TryParse(txtN.Text, out n))
             {
-                string num = "1";
-
-                for (int i = 0; i < n - 1; i++)
-                {
-                    Console.WriteLine(num);
-                    num = word(num);
-                }
-                return num;
+                Solution solution = new Solution();
+                string result = solution.CountAndSay(n);
+                lblResult.Text = result;
             }
-
-            public string word(string num)
+            else
             {
-                string ans = "";
-                char current = num[0];
-                int charCount = 0;
-                for (int i = 0; i < num.Length; i++)
-                {
-                    if (num[i] == current)
-                    {
-                        charCount++;
-                    }
-                    else
-                    {
-                        ans += charCount.ToString() + current;
-                        current = num[i];
-                        charCount = 1;
-                    }
-                }
-                ans += charCount.ToString() + current;
-                return ans;
+                lblResult.Text = "Invalid input: Please enter a valid integer value.";
             }
         }
     }
-}
+
+    public class Solution
+    {
+        public string CountAndSay(int n)
+        {
+            if (n <= 0)
+                return "";
+            string result = "1";
+            for (int i = 1; i < n; i++)
+            {
+                result = Say(result);
+            }
+            return result;
+        }
+
+        private string Say(string str)
+        {
+            string result = "";
+            int count = 1;
+            char digit = str[0];
+            for (int i = 1; i < str.Length; i++)
+            {
+                if (str[i] == digit)
+                {
+                    count++;
+                }
+                else
+                {
+                    result += count.ToString() + digit;
+                    count = 1;
+                    digit = str[i];
+                }
+            }
+            result += count.ToString() + digit;
+            return result;
+        }
+    }
+
+} 
+
+
+
