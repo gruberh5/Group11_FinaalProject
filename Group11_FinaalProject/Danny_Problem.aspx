@@ -9,6 +9,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
+             <h2>Roman to Integer Converter</h2>
+            <asp:TextBox ID="RomanTextBox" runat="server"></asp:TextBox><br />
+            <asp:Button ID="ConvertButton" runat="server" Text="Convert" OnClick="ConvertButton_Click" /><br />
+            <asp:Label ID="ResultLabel" runat="server" Text=""></asp:Label>
         </div>
     </form>
 </body>
