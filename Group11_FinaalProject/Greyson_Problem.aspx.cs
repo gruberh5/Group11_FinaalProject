@@ -29,7 +29,7 @@ namespace Group11_FinaalProject
             int n;
             if (int.TryParse(txtN.Text, out n))
             {
-                Solution solution = new Solution();
+                Greyson solution = new Greyson();
                 string result = solution.CountAndSay(n);
                 lblResult.Text = result;
             }
@@ -40,7 +40,7 @@ namespace Group11_FinaalProject
         }
     }
 
-    public class Solution
+    public class Greyson
     {
         public string CountAndSay(int n)
         {

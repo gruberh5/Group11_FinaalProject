@@ -4,6 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+/// Name: Henry Gruber
+/// email: gruberhw@mail.uc.edu
+/// Assignment Title: Final Project
+/// Due Date: 4/22/2024
+/// Course: IS 3050
+/// Semester/Year: Spring 
+/// Brief Description: This project displays our use of github, ASPX and C#
+/// Citations: ChatGPT
+/// Anything else that's relevant: StackOverFlow
 
 namespace Group11_FinaalProject
 {
