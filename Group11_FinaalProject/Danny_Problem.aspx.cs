@@ -14,13 +14,13 @@ namespace Group11_FinaalProject
 
         }
 
-        // Event handler for the ConvertButton click event
+       
         protected void ConvertButton_Click(object sender, EventArgs e)
         {
-            // Create an instance of the Solution class
+           
             Solution solution = new Solution();
 
-            // Call the RomanToInt method from the Solution class and display the result
+            
             string romanNumeral = RomanTextBox.Text.ToUpper(); // Convert input to uppercase
             int result = solution.RomanToInt(romanNumeral);
             ResultLabel.Text = $"The integer value of {romanNumeral} is: {result}";
