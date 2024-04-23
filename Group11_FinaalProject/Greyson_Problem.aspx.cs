@@ -1,4 +1,14 @@
-﻿using System;
+﻿/// Name: Greyson Barber
+/// email: barbergn@mail.uc.edu
+/// Assignment Title: Final Project
+/// Due Date: 4/22/2024
+/// Course: IS 3050
+/// Semester/Year: Spring 
+/// Brief Description: This project displays our use of github, ASPX and C#
+/// Citations: ChatGPT
+/// Anything else that's relevant: StackOverFlow
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
