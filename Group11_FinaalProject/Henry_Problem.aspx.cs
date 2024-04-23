@@ -13,5 +13,29 @@ namespace Group11_FinaalProject
         {
 
         }
+        public class Solution
+        {
+            public int[] CanSeePersonsCount(int[] heights)
+            {
+                int[] ans = new int[heights.Length];
+                Stack<int> stack = new Stack<int>();
+                for (int i = 0; i < heights.Length; i++)
+                {
+                    int height = heights[i];
+                    while (stack.Count != 0 && heights[stack.Peek()] <= height)
+                    {
+                        ans[stack.Pop()] += 1;
+                    }
+                    if (stack.Count != 0)
+                    {
+                        ans[stack.Peek()] += 1;
+                    }
+                    stack.Push(i);
+                }
+                return ans;
+            }
+        }
+
     }
-}
+
+    }
